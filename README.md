@@ -15,6 +15,7 @@ A Python-based tool for fetching and analyzing NBA statistics using the official
 1. Clone this repository:
 ```bash
 git clone https://github.com/jagalipeau/Ballin
+cd Ballin
 ```
 
 2. Install the required dependencies:
