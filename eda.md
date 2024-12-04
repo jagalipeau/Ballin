@@ -1,0 +1,127 @@
+# DF documentaiton
+
+**`player_stats()`**
+
+- `PLAYER_ID`: player ID
+- `PLAYER_NAME`: Player name
+- `NICKNAME`: Player nickname
+- `TEAM_ID`: Team ID
+- `TEAM_ABBREVIATION`: Team name abbreviation
+- `AGE`: Age
+- `GP`: Games played
+- `W`: Wins
+- `L`: Losses
+- `W_PCT`: Win Percentage
+- `MIN`: Minutes Played
+- `FGM`: Goals made
+- `FGA`: Goals attemplted
+- `FG_PCT`: Goal percentage
+- `FG3M`: 3 point goals made
+- `FG3A`: 3 point goals attempted
+- `FG3_PCT`: 3 point goal percentage
+- `FTM`: Free throws made
+- `FTA`: Free throws attempted
+- `FT_PCT`: Free throw percentages
+- `OREB`: Offensive rebounds
+- `DREB`: Defensive rebounds
+- `REB`: Rebounds
+- `AST`: Assists
+- `TOV`: Turnovers
+- `STL`: Steals
+- `BLK`: Blocks
+- `BLKA`: Blocks against
+- `PF`: Personal Fouls
+- `PFD`: Personal founls agaianst the player
+- `PTS`: Points
+- `PLUS_MINUS`: Plus/minus score
+- `NBA_FANTASY_PTS`: Fantasy points
+- `DD2`: Double Doubles
+- `TD3`: Triple Doubles
+- `WNBA_FANTASY_PTS`: Fantasy points
+- `GP_RANK`: Games played rank
+- `W_RANK`: Wins rank
+- `L_RANK`: Losses Rank
+- `W_PCT_RANK`: Win percentage rank
+- `MIN_RANK`: Minutes played rank
+- `FGM_RANK`: Goals made rank
+- `FGA_RANK`: Goals attempted rank
+- `FG_PCT_RANK`: Goals percent rank
+- `FG3M_RANK`: Three point goal made rank
+- `FG3A_RANK`: Three point goal attempted rank
+- `FG3_PCT_RANK`: Three point goal percentage rank
+- `FTM_RANK`: Free throws made rank
+- `FTA_RANK`: Free Throws Attempted
+- `FT_PCT_RANK`: Free throw percent rank
+- `OREB_RANK`: Offensive rebound rank
+- `DREB_RANK`: Defensive rebound rank
+- `REB_RANK`: Rebound rank
+- `AST_RANK`:Assists rank
+- `TOV_RANK`: Turnovers rank
+- `STL_RANK`: Steals rank
+- `BLK_RANK`: Blocks Rank
+- `BLKA_RANK`: Blokcs against rank
+- `PF_RANK`: Personal fouls rank
+- `PFD_RANK`: Personal fouls against the player rank
+- `PTS_RANK`: Points Rank
+- `PLUS_MINUS_RANK`: Plus/minus rank
+- `NBA_FANTASY_PTS_RANK`: Fantasy points rank
+- `DD2_RANK`: Double doubles rank
+- `TD3_RANK`: Triple doubles ranks
+- `WNBA_FANTASY_PTS_RANK`: WNBA fantasy points rank
+
+**`team_stats()`**
+
+- `TEAM_ID`: Teamm ID
+- `TEAM_NAME`: Team name
+- `GP`: Games played
+- `W`: Wins
+- `L`: Losses
+- `W_PCT`: Win Percentage
+- `MIN`: Minutes Played
+- `FGM`: Goals made
+- `FGA`: Goals attemplted
+- `FG_PCT`: Goal percentage
+- `FG3M`: 3 point goals made
+- `FG3A`: 3 point goals attempted
+- `FG3_PCT`: 3 point goal percentage
+- `FTM`: Free throws made
+- `FTA`: Free throws attempted
+- `FT_PCT`: Free throw percentages
+- `OREB`: Offensive rebounds
+- `DREB`: Defensive rebounds
+- `REB`: Rebounds
+- `AST`: Assists
+- `TOV`: Turnovers
+- `STL`: Steals
+- `BLK`: Blocks
+- `BLKA`: Blocks against
+- `PF`: Personal Fouls
+- `PFD`: Personal founls agaianst the team
+- `PTS`: Points
+- `PLUS_MINUS`: Plus/minus score
+- `GP_RANK`: Games played rank
+- `W_RANK`: Wins rank
+- `L_RANK`: Losses Rank
+- `W_PCT_RANK`: Win percentage rank
+- `MIN_RANK`: Minutes played rank
+- `FGM_RANK`: Goals made rank
+- `FGA_RANK`: Goals attempted rank
+- `FG_PCT_RANK`: Goal percent rank
+- `FG3M_RANK`: Three point goal made rank
+- `FG3A_RANK`: Three point goal attempted rank
+- `FG3_PCT_RANK`: Three point goal percentage rank
+- `FTM_RANK`: Free throws made rank
+- `FTA_RANK`: Free Throws Attempted
+- `FT_PCT_RANK`: Free throw percent rank
+- `OREB_RANK`: Offensive rebound rank
+- `DREB_RANK`: Defensive rebound rank
+- `REB_RANK`: Rebound rank
+- `AST_RANK`:Assists rank
+- `TOV_RANK`: Turnovers rank
+- `STL_RANK`: Steals rank
+- `BLK_RANK`: Blocks Rank
+- `BLKA_RANK`: Blokcs against rank
+- `PF_RANK`: Personal fouls rank
+- `PFD_RANK`: Personal fouls against the player rank
+- `PTS_RANK`: Points Rank
+- `PLUS_MINUS_RANK`: Plus/minus rank

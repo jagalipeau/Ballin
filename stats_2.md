@@ -1,0 +1,925 @@
+## Markdown Template for Python Documentation
+
+This template provides a basic structure for writing Python documentation
+using Markdown. Feel free to customize it to suit your specific needs.
+
+**Module Name:** `stats_2.py`
+
+**Module Summary:**
+
+This module provides functions for download NBA Player and Team stats from **nba.com**
+
+**Module Contents:**
+
+- `player_stats()`: Returns player stats as a dataframe
+- `team_stats()`: Returns team stats as a dataframe
+
+**`player_stats()` Function Summary:**
+
+This function downloads player stats from **nba.com** and returns them as a dataframe.
+
+**Optional Parameters:**
+
+- `College` (str): The name of the college the player went to, if applicable.
+  - ###### **Valid Inputs:**
+    - `High%20School`
+    - `None`
+    - `Acadia%20(CAN)`
+    - `Adams%20State`
+    - `Adelphi`
+    - `Air%20Force`
+    - `Akron`
+    - `Alabama`
+    - `Alabama%20A&M`
+    - `Alabama-Birmingham`
+    - `Alabama-Huntsville`
+    - `Alabama%20State`
+    - `Albany`
+    - `Albany%20State%20(GA)`
+    - `Alcorn%20State`
+    - `Alliance`
+    - `American`
+    - `American%20International`
+    - `Angelo%20State`
+    - `Appalachian%20State`
+    - `Arizona`
+    - `Arizona%20State`
+    - `Arkansas`
+    - `Arkansas-Fort%20Smith`
+    - `Arkansas-Little%20Rock`
+    - `Arkansas-Pine%20Bluff`
+    - `Arkansas%20State`
+    - `Army`
+    - `Assumption`
+    - `Auburn`
+    - `Auburn-Montgomery`
+    - `Augsburg`
+    - `Augustana%20(IL)`
+    - `Augustana%20(SD)`
+    - `Augusta%20State`
+    - `Aurora`
+    - `Austin%20Peay`
+    - `Averett`
+    - `Azusa%20Pacific`
+    - `Ball%20State`
+    - `Baltimore`
+    - `Barton`
+    - `Barton%20Community%20College`
+    - `Baylor`
+    - `Belmont`
+    - `Belmont%20Abbey`
+    - `Beloit`
+    - `Bemidji%20State`
+    - `Benedict`
+    - `Bethel%20(TN)`
+    - `Binghamton`
+    - `Biola`
+    - `Blinn`
+    - `Bloomfield`
+    - `Bloomsburg`
+    - `Bluefield`
+    - `Boise%20State`
+    - `Boston%20College`
+    - `Boston%20University`
+    - `Bowie%20State`
+    - `Bowling%20Green`
+    - `Bradley`
+    - `Brevard%20Community%20College`
+    - `Brewton-Parker`
+    - `Bridgeport`
+    - `Brigham%20Young`
+    - `Brigham%20Young-Hawaii`
+    - `Brooklyn`
+    - `Brown`
+    - `Bryant`
+    - `Bucknell`
+    - `Buffalo`
+    - `Buffalo%20State`
+    - `Butler`
+    - `Butler%20Community%20College`
+    - `C.W.%20Post`
+    - `California`
+    - `California%20(PA)`
+    - `California-Berkeley`
+    - `California-Davis`
+    - `California-Irvine`
+    - `California-Los%20Angeles`
+    - `California-Riverside`
+    - `California-Santa%20Barbara`
+    - `Cal%20State-Bakersfield`
+    - `Cal%20State-Dominguez%20Hills`
+    - `Cal%20State-Fullerton`
+    - `Cal%20State-Los%20Angeles`
+    - `Cal%20State-Northridge`
+    - `Cal%20State-Poly%20Pomona`
+    - `Cal%20State-San%20Bernardino`
+    - `Campbell`
+    - `Campbellsville`
+    - `Canisius`
+    - `Case%20Western`
+    - `Catholic`
+    - `Centenary%20(LA)`
+    - `Central%20Arkansas`
+    - `Central%20Connecticut%20State`
+    - `Central%20Florida`
+    - `Central%20Michigan`
+    - `Central%20Missouri`
+    - `Central%20Oklahoma`
+    - `Central%20State%20(OH)`
+    - `Central%20Washington`
+    - `Charleston%20(WV)`
+    - `Cheyney`
+    - `Chicago%20State`
+    - `Christopher%20Newport`
+    - `Cincinnati`
+    - `City%20College%20of%20New%20York`
+    - `Claflin`
+    - `Clark%20Atlanta`
+    - `Clayton%20State`
+    - `Clemson`
+    - `Cleveland%20State`
+    - `Colgate`
+    - `College%20of%20Charleston`
+    - `College%20of%20New%20Jersey`
+    - `Colorado`
+    - `Colorado%20Christian`
+    - `Colorado%20State`
+    - `Colorado%20State-Pueblo`
+    - `Columbia`
+    - `Columbus%20State`
+    - `Concordia`
+    - `Concordia-Irvine`
+    - `Connecticut`
+    - `Coppin%20State`
+    - `Cornell`
+    - `Corpus%20Christi`
+    - `Creighton`
+    - `Culver-Stockton`
+    - `Dakota%20Wesleyan`
+    - `Dartmouth`
+    - `Davidson`
+    - `Davis%20&%20Elkins`
+    - `Dayton`
+    - `Delaware`
+    - `Delaware%20State`
+    - `Delta%20State`
+    - `Denver`
+    - `DePaul`
+    - `DePauw`
+    - `Detroit%20Mercy`
+    - `Dillard`
+    - `District%20of%20Columbia`
+    - `Drake`
+    - `Drexel`
+    - `Duke`
+    - `Duquesne`
+    - `East%20Carolina`
+    - `East%20Central`
+    - `Eastern%20Illinois`
+    - `Eastern%20Kentucky`
+    - `Eastern%20Michigan`
+    - `Eastern%20New%20Mexico`
+    - `Eastern%20Oklahoma%20State%20(Junior%20College)`
+    - `Eastern%20Washington`
+    - `East%20Tennessee%20State`
+    - `Eckerd`
+    - `Elizabeth%20City%20State`
+    - `Elon`
+    - `Evangel`
+    - `Evansville`
+    - `Fairfield`
+    - `Fairleigh%20Dickinson`
+    - `Fayetteville%20State`
+    - `Ferris%20State`
+    - `Findlay`
+    - `Florida`
+    - `Florida%20A&M`
+    - `Florida%20Atlantic`
+    - `Florida%20Community%20College`
+    - `Florida%20Gulf%20Coast`
+    - `Florida%20International`
+    - `Florida%20State`
+    - `Fordham`
+    - `Fort%20Valley%20State`
+    - `Franklin`
+    - `Fresno%20State`
+    - `Friends`
+    - `Furman`
+    - `Gannon`
+    - `Gardner-Webb`
+    - `George%20Mason`
+    - `Georgetown`
+    - `Georgetown%20College`
+    - `George%20Washington`
+    - `Georgia`
+    - `Georgia%20Southern`
+    - `Georgia%20State`
+    - `Georgia%20Tech`
+    - `Gonzaga`
+    - `Grambling`
+    - `Grand%20Canyon`
+    - `Green%20Bay`
+    - `Grinnell%20College`
+    - `Guilford`
+    - `Hamline`
+    - `Hampton`
+    - `Hardin-Simmons`
+    - `Hartford`
+    - `Harvard`
+    - `Hawaii`
+    - `High%20Point`
+    - `Hillsborough%20Community%20College`
+    - `Hillsdale`
+    - `Hofstra`
+    - `Holy%20Cross`
+    - `Holy%20Family`
+    - `Houston`
+    - `Houston%20Baptist`
+    - `Howard`
+    - `Humboldt%20State`
+    - `Huntington`
+    - `Idaho`
+    - `Idaho%20State`
+    - `Illinois`
+    - `Illinois-Chicago`
+    - `Illinois%20State`
+    - `Illinois%20Wesleyan`
+    - `Incarnate%20Word`
+    - `Indiana`
+    - `Indianapolis`
+    - `Indiana%20Purdue-Fort%20Wayne`
+    - `Indiana%20Purdue-Indianapolis`
+    - `Indiana%20State`
+    - `Indiana%20Tech`
+    - `Indian%20Hills%20Community%20College`
+    - `Iona`
+    - `Iowa`
+    - `Iowa%20State`
+    - `Jackson%20State`
+    - `Jacksonville`
+    - `Jacksonville%20State`
+    - `James%20Madison`
+    - `Johnson%20C.%20Smith`
+    - `Kansas`
+    - `Kansas%20State`
+    - `Kennesaw%20State`
+    - `Kent%20State`
+    - `Kentucky`
+    - `Kentucky%20State`
+    - `Kentucky%20Wesleyan`
+    - `Kenyon`
+    - `King's%20(NY)`
+    - `Lafayette`
+    - `Lamar`
+    - `La%20Salle`
+    - `Lawrence%20Tech`
+    - `Lebanon%20Valley`
+    - `Lee`
+    - `Lehigh`
+    - `Le%20Moyne`
+    - `Lewis`
+    - `Liberty`
+    - `Lincoln%20(MO)`
+    - `Lipscomb`
+    - `Long%20Beach%20State`
+    - `Long%20Island-Brooklyn`
+    - `Longwood`
+    - `Los%20Angeles%20Community%20College`
+    - `Louisiana-Lafayette`
+    - `Louisiana-Monroe`
+    - `Louisiana%20State`
+    - `Louisiana%20Tech`
+    - `Louisville`
+    - `Loyola-Chicago`
+    - `Loyola-Maryland`
+    - `Loyola-Marymount`
+    - `Maine`
+    - `Manhattan`
+    - `Marist`
+    - `Marquette`
+    - `Marshall`
+    - `Maryland`
+    - `Maryland-Eastern%20Shore`
+    - `Massachusetts`
+    - `Master's`
+    - `McNeese%20State`
+    - `Memphis`
+    - `Mercer`
+    - `Meridian%20Community%20College`
+    - `Merrimack`
+    - `Metro%20State`
+    - `Miami%20(FL)`
+    - `Miami%20(OH)`
+    - `Michigan`
+    - `Michigan%20State`
+    - `Middle%20Tennessee%20State`
+    - `Midland`
+    - `Midwestern%20State`
+    - `Miles`
+    - `Millersville`
+    - `Minnesota`
+    - `Minnesota-Duluth`
+    - `Minnesota%20State-Mankato`
+    - `Mississippi`
+    - `Mississippi%20Gulf%20Community%20College`
+    - `Mississippi%20State`
+    - `Mississippi%20Valley%20State`
+    - `Missouri`
+    - `Missouri-Kansas%20City`
+    - `Missouri%20State`
+    - `Missouri%20Western%20State`
+    - `Monmouth`
+    - `Montana`
+    - `Montana%20State`
+    - `Montevallo`
+    - `Morehead%20State`
+    - `Morehouse`
+    - `Morgan%20State`
+    - `Mountain%20State`
+    - `Mount%20St.%20Mary's`
+    - `Mount%20Union`
+    - `Mt.%20San%20Antonio`
+    - `Muhlenberg`
+    - `Murray%20State`
+    - `Navy`
+    - `Nebraska`
+    - `Nebraska-Kearney`
+    - `Nebraska-Omaha`
+    - `Nevada`
+    - `Nevada-Las%20Vegas`
+    - `Nevada-Reno`
+    - `New%20Jersey%20Institute%20of%20Technology`
+    - `New%20Mexico`
+    - `New%20Mexico%20Highlands`
+    - `New%20Mexico%20State`
+    - `New%20Mexico%20Tech`
+    - `New%20Orleans`
+    - `New%20York%20University`
+    - `Niagara`
+    - `Nicholls%20State`
+    - `Norfolk%20State`
+    - `North%20Carolina`
+    - `North%20Carolina%20A&T`
+    - `North%20Carolina-Asheville`
+    - `North%20Carolina%20Central`
+    - `North%20Carolina-Charlotte`
+    - `North%20Carolina-Greensboro`
+    - `North%20Carolina%20State`
+    - `North%20Carolina-Wilmington`
+    - `North%20Dakota`
+    - `North%20Dakota%20State`
+    - `Northeastern`
+    - `Northeastern%20State`
+    - `Northeast%20Mississippi%20Community%20College`
+    - `Northern%20Arizona`
+    - `Northern%20Colorado`
+    - `Northern%20Illinois`
+    - `Northern%20Iowa`
+    - `Northern%20Kentucky`
+    - `North%20Park`
+    - `North%20Texas`
+    - `Northwestern`
+    - `Northwestern%20Oklahoma`
+    - `Northwestern%20Oklahoma%20State`
+    - `Northwestern%20State`
+    - `Northwest%20Florida%20State`
+    - `Northwest%20Nazarene`
+    - `Northwood`
+    - `Notre%20Dame`
+    - `Oakland`
+    - `Ohio`
+    - `Ohio%20State`
+    - `Ohio%20Wesleyan`
+    - `Oklahoma`
+    - `Oklahoma%20Baptist`
+    - `Oklahoma%20City`
+    - `Oklahoma%20Science%20and%20Arts`
+    - `Oklahoma%20State`
+    - `Oklahoma%20Wesleyan`
+    - `Old%20Dominion`
+    - `Oral%20Roberts`
+    - `Oregon`
+    - `Oregon%20State`
+    - `Ouachita%20Baptist`
+    - `Pacific`
+    - `Paine`
+    - `Penn%20State`
+    - `Pennsylvania`
+    - `Pennsylvania-Kutztown`
+    - `Pepperdine`
+    - `Pfeiffer`
+    - `Phillips`
+    - `Pikeville`
+    - `Pittsburgh`
+    - `Portland`
+    - `Portland%20State`
+    - `Potsdam`
+    - `Prairie%20View%20A&M`
+    - `Princeton`
+    - `Providence`
+    - `Puget%20Sound`
+    - `Purdue`
+    - `Queens%20(NY)`
+    - `Quincy`
+    - `Rhode%20Island`
+    - `Rice`
+    - `Richmond`
+    - `Rider`
+    - `Robert%20Morris%20(IL)`
+    - `Rochester%20(NY)`
+    - `Rockhurst`
+    - `Rutgers`
+    - `Sacramento%20State`
+    - `Sacred%20Heart`
+    - `Saginaw%20Valley`
+    - `Saint%20Augustine's`
+    - `Saint%20Francis%20(PA)`
+    - `Saint%20Joseph's`
+    - `Saint%20Louis`
+    - `Saint%20Mary's%20(CA)`
+    - `Saint%20Mary's%20(MN)`
+    - `Saint%20Peter's`
+    - `Saint%20Rose`
+    - `Saint%20Vincent`
+    - `Salem%20International`
+    - `Sam%20Houston%20State`
+    - `San%20Diego`
+    - `San%20Diego%20State`
+    - `San%20Francisco`
+    - `San%20Jose%20State`
+    - `Santa%20Clara`
+    - `Scranton`
+    - `Seattle`
+    - `Seton%20Hall`
+    - `Seward%20County%20Community%20College`
+    - `Shaw`
+    - `Shippensburg`
+    - `Siena`
+    - `Slippery%20Rock`
+    - `South%20Alabama`
+    - `South%20Carolina`
+    - `South%20Carolina-Aiken`
+    - `South%20Carolina%20State`
+    - `South%20Carolina%20Upstate`
+    - `South%20Dakota`
+    - `South%20Dakota%20State`
+    - `Southeastern%20Illinois`
+    - `Southeastern%20Louisiana`
+    - `Southeastern%20Oklahoma%20State`
+    - `Southeast%20Missouri%20State`
+    - `Southern`
+    - `Southern%20California`
+    - `Southern%20Illinois`
+    - `Southern%20Methodist`
+    - `Southern%20Mississippi`
+    - `Southern%20Nazarene`
+    - `Southern%20Utah`
+    - `South%20Florida`
+    - `Southwest%20Baptist`
+    - `Springfield`
+    - `St.%20Ambrose`
+    - `St.%20Anselm`
+    - `St.%20Bonaventure`
+    - `St.%20Cloud%20State`
+    - `St.%20Francis%20Brooklyn`
+    - `St.%20John's%20(NY)`
+    - `St.%20Mary's%20(CA)`
+    - `St.%20Mary's%20(TX)`
+    - `St.%20Peter's`
+    - `St.%20Thomas%20(FL)`
+    - `Stanford`
+    - `Stephen%20F.%20Austin`
+    - `Stetson`
+    - `Stony%20Brook`
+    - `Syracuse`
+    - `Tampa`
+    - `Tarleton%20State`
+    - `Temple`
+    - `Tennessee`
+    - `Tennessee-Chattanooga`
+    - `Tennessee-Martin`
+    - `Tennessee%20State`
+    - `Tennessee%20Tech`
+    - `Texas`
+    - `Texas%20A&M`
+    - `Texas%20A&M-Commerce`
+    - `Texas%20A&M-Corpus%20Christi`
+    - `Texas-Arlington`
+    - `Texas%20Christian`
+    - `Texas-El%20Paso`
+    - `Texas-Pan%20American`
+    - `Texas-San%20Antonio`
+    - `Texas%20Southern`
+    - `Texas%20State`
+    - `Texas%20Tech`
+    - `Texas%20Wesleyan`
+    - `Thomas%20More`
+    - `Toledo`
+    - `Towson`
+    - `Trinity%20Valley%20Community%20College`
+    - `Troy%20State`
+    - `Truman%20State`
+    - `Tulane`
+    - `Tulsa`
+    - `Tuskegee`
+    - `UCLA`
+    - `Utah`
+    - `Utah%20State`
+    - `Utah%20Valley`
+    - `Valdosta%20State`
+    - `Valparaiso`
+    - `Vanderbilt`
+    - `Venezuela`
+    - `Vermont`
+    - `Villanova`
+    - `Virginia`
+    - `Virginia%20Commonwealth`
+    - `Virginia%20Military%20Institute`
+    - `Virginia%20Tech`
+    - `Virginia%20Union`
+    - `Voorhees`
+    - `Vorhees`
+    - `Wake%20Forest`
+    - `Walsh`
+    - `Washington`
+    - `Washington%20&%20Jefferson`
+    - `Washington%20State`
+    - `Wayne%20State%20(MI)`
+    - `Weber%20State`
+    - `Western%20Carolina`
+    - `Western%20Illinois`
+    - `Western%20Kentucky`
+    - `Western%20Michigan`
+    - `Western%20Washington`
+    - `West%20Florida`
+    - `West%20Georgia`
+    - `Westminster%20(PA)`
+    - `West%20Texas%20A&M`
+    - `West%20Virginia`
+    - `West%20Virginia%20State`
+    - `West%20Virginia%20Tech`
+    - `West%20Virginia%20Wesleyan`
+    - `Wheaton%20(IL)`
+    - `Whitworth`
+    - `Wichita%20State`
+    - `Wilberforce`
+    - `William%20&%20Mary`
+    - `William%20Jessup`
+    - `William%20Paterson`
+    - `William%20Penn`
+    - `Wingate`
+    - `Winona%20State`
+    - `Winston-Salem%20State`
+    - `Winthrop%20(SC)`
+    - `Wisconsin`
+    - `Wisconsin-Eau%20Claire`
+    - `Wisconsin-Green%20Bay`
+    - `Wisconsin-Milwaukee`
+    - `Wisconsin-Parkside`
+    - `Wisconsin-River%20Falls`
+    - `Wisconsin-Stevens%20Point`
+    - `Wisconsin-Whitewater`
+    - `Wofford`
+    - `Wooster`
+    - `Wright%20State`
+    - `Wyoming`
+    - `Xavier`
+    - `Xavier%20(LA)`
+    - `Yale`
+    - `Yonsei%20(KOR)`
+    - `Youngstown%20State`
+  - ##### **Requirements:**
+    - First letter of each word is **capitol**
+    - Spaces are represented with **%20**
+- `Conference` (str): East or West conference
+  - ###### **Valid Inputs:**
+    - `East`
+    - `West`
+- `Country` (str): Country here player is from
+  - ###### **Valid Inputs:**
+    - `US`
+    - `IT`
+    - `ETC`
+  - ##### **Requirements:**
+    - Two letter country code
+    - [Found Here](https://www.iban.com/country-codes)
+- `DateFrom` (str): Start date of when to pull data
+  - ###### **Valid Inputs:**
+    - Any valid date in the format
+    - `MM%2FDD%2FYYYY`
+- `DateTo` (str): End date of when to pull data
+  - ###### **Valid Inputs:**
+    - Any valid date in the format
+    - `MM%2FDD%2FYYYY`
+- `Division` (str): Divsion
+  - ###### **Valid Inputs:**
+    - `Atlantic`
+    - `Central`
+    - `Southeast`
+    - `Pacific`
+    - `Northwest`
+    - `Soutwest`
+- `DraftPick` (str): Draft pick
+  - ###### **Valid Inputs:**
+    - `1st%20Pick`
+    - `Lottery%20Pick`
+    - `Top%205%20Pick`
+    - `Top%2010%20Pick`
+    - `Top%2015%20Pick`
+    - `Top%2020%20Pick`
+    - `Top%2025%20Pick`
+    - `Picks%2011%20Thru%2020`
+    - `Picks%2021%20Thru%2030`
+    - `Undrafted`
+- `DraftYear` (str): Draft year
+  - ###### **Valid Inputs:**
+    - `2023`
+    - `2022`
+    - `2021`
+    - `2020`
+    - `2019`
+    - `2018`
+    - `2017`
+    - `2016`
+    - `2015`
+    - `2014`
+    - `2013`
+    - `2012`
+    - `2011`
+    - `2010`
+    - `2009`
+    - `2008`
+    - `2007`
+    - `2006`
+    - `2005`
+    - `2004`
+    - `2003`
+    - `2002`
+    - `2001`
+    - `2000`
+    - `1999`
+    - `1998`
+    - `1997`
+    - `1996`
+    - `1995`
+    - `1994`
+    - `1993`
+    - `1992`
+    - `1991`
+    - `1990`
+    - `1989`
+    - `1988`
+    - `1987`
+    - `1986`
+    - `1985`
+    - `1984`
+    - `1983`
+    - `1982`
+    - `1981`
+    - `1980`
+    - `1979`
+    - `1978`
+    - `1977`
+    - `1976`
+    - `1975`
+    - `1974`
+    - `1973`
+    - `1972`
+    - `1971`
+    - `1970`
+    - `1969`
+    - `1968`
+    - `1967`
+    - `1966`
+    - `1965`
+    - `1964`
+    - `1963`
+    - `1962`
+    - `1961`
+    - `1960`
+    - `1959`
+    - `1958`
+    - `1957`
+    - `1956`
+    - `1955`
+    - `1954`
+    - `1953`
+    - `1952`
+    - `1951`
+    - `1950`
+    - `1949`
+    - `1948`
+    - `1947`
+- `GameScope` (str): Unknown
+  - ###### **Valid Inputs:**
+- `GameSegment` (str): Half of game
+  - ###### **Valid Inputs:**
+    - `First%20Half`
+    - `Second%20Half`
+    - `Overtime`
+- `Height` (str): Height
+  - ###### **Valid Inputs:**
+    - `LT%206-0`
+    - `GT%206-0`
+    - `LT%206-4`
+    - `GT%206-4`
+    - `LT%206-7`
+    - `GT%206-7`
+    - `LT%206-10`
+    - `GT%206-10`
+    - `LT%207-0`
+    - `GT%207-0`
+- `ISTRound` (str): In-Season Tournament Round
+  - ###### **Valid Inputs:**
+    - `Group`
+    - `Knockout`
+    - `Semi`
+    - `Quarter`
+    - `Championship`
+    - `East%20Group%20A`
+    - `East%20Group%20B`
+    - `East%20Group%20C`
+    - `West%20Group%20A`
+    - `West%20Group%20B`
+    - `West%20Group%20C`
+- `LastNGames` (str): Last Number of games
+
+  - ###### **Valid Inputs:**
+    - `1`
+    - `2`
+    - `3`
+    - `4`
+    - `5`
+    - `6`
+    - `7`
+    - `8`
+    - `9`
+    - `10`
+    - `11`
+    - `12`
+    - `13`
+    - `14`
+    - `15`
+
+- `LeagueID` (str): Unknown
+  - ###### **Valid Inputs:**
+- `Location` (str): Home or away
+  - ###### **Valid Inputs:**
+    - `Home`
+    - `Road`
+- `MeasureType` (str): Unknown
+  - ###### **Valid Inputs:**
+- `Month` (str): Month
+
+  - ###### **Valid Inputs:**
+
+    - `4` Jan
+    - `5` Feb
+    - `6` March
+    - `7` April
+    - `8` May
+    - `9` June
+    - `10` July
+    - `11` August
+    - `12` Sep
+    - `1` Oct
+    - `2` Nov
+    - `3` Dec
+
+- `OpponentTeamID` (str): OpponentTeamID
+  - ###### **Valid Inputs:**
+    - Find Team ID in the team_stats() function
+- `Outcome` (str): Win or Loss
+  - ###### **Valid Inputs:**
+  - `W`
+  - `L`
+- `PORound` (str): Playoff round
+  - ###### **Valid Inputs:**
+    - `1` Conderence Quarter-Finals
+    - `2` Conference Semi-Finals
+    - `3` Conference Finals
+    - `4` Fianls
+- `PaceAdjusted` (str): Unknown
+  - ###### **Valid Inputs:**
+- `PerMode` (str): Playoff round
+  - ###### **Valid Inputs:**
+    - `PerGame`
+    - `Per100Possessions`
+    - `Per100Plays`
+    - `Per48`
+    - `Per40`
+    - `Per36`
+    - `PerMinute`
+    - `PerPossession`
+    - `PerPlay`
+    - `MinutesPer`
+- `Period` (str): Playoff round
+  - ###### **Valid Inputs:**
+    - `1` 1st Quarter
+    - `2` 2nd Quarter
+    - `3` 3rd Quarter
+    - `4` 4th Quarter
+    - `5` OT1
+    - `6` OT2
+    - `7` OT3
+    - `8` OT4
+    - `9` OT5
+    - `10` OT6
+    - `11` OT7
+    - `12` OT8
+    - `13` OT9
+    - `14` OT10
+- `PlayerExperience` (str): Player Experience
+  - ###### **Valid Inputs:**
+    - `Rookie`
+    - `Sophomore`
+    - `Veteran`
+- `PlayerPosition` (str): Player Position
+  - ###### **Valid Inputs:**
+    - `F` Forward
+    - `C` Center
+    - `G` Guard
+- `PlusMinus` (str): Unknown
+  - ###### **Valid Inputs:**
+- `Rank` (str): Unknown
+  - ###### **Valid Inputs:**
+- `Season` (str): Season year
+  - ###### **Valid Inputs:**
+    - `2023-24`
+    - `2022-23`
+    - `2021-22`
+    - `2020-21`
+    - `2019-20`
+    - `2018-19`
+    - `2017-18`
+    - `2016-17`
+    - `2015-16`
+    - `2014-15`
+    - `2013-14`
+    - `2012-13`
+    - `2011-12`
+    - `2010-11`
+    - `2009-10`
+    - `2008-09`
+    - `2007-08`
+    - `2006-07`
+    - `2005-06`
+    - `2004-05`
+    - `2003-04`
+    - `2002-03`
+    - `2001-02`
+    - `2000-01`
+    - `1999-00`
+    - `1998-99`
+    - `1997-98`
+    - `1996-97`
+- `SeasonSegment` (str): Season year
+  - ###### **Valid Inputs:**
+    - `Pre%20All-Star`
+    - `Post%20All-Star`
+- `SeasonType` (str): Season Type
+  - ###### **Valid Inputs:**
+    - `Regular%20Season`
+    - `Playoffs`
+    - `All%20Star`
+    - `PlayIn`
+    - `IST`
+- `ShockClockRange` (str): Shock Clock Range
+  - ###### **Valid Inputs:**
+    - `24-22`
+    - `22-18%20Very%20Early`
+    - `18-15%20Early`
+    - `15-7%20Average`
+    - `7-4%20Late`
+    - `4-0%20Very%20Late`
+- `StartBench` (str): Shock Clock Range
+  - ###### **Valid Inputs:**
+    - `Starters`
+    - `Bench`
+- `TeamID` (str): TeamID
+  - ###### **Valid Inputs:**
+  - Found in the team_stats() function
+- `VsConference` (str): East or West conference
+  - ###### **Valid Inputs:**
+    - `East`
+    - `West`
+- `VsDivision` (str): Vs Divsion
+  - ###### **Valid Inputs:**
+    - `Atlantic`
+    - `Central`
+    - `Southeast`
+    - `Pacific`
+    - `Northwest`
+    - `Soutwest`
+- `Weight` (str): Weight
+  - ###### **Valid Inputs:**
+    - `LT%20200` < 200
+    - `GT%20200` > 200
+    - `LT%20225` < 225
+    - `GT%20225` > 225
+    - `LT%20250` < 250
+    - `GT%20250` > 250
+    - `LT%20275` < 275
+    - `GT%20275` > 275
+    - `LT%20300` < 300
+    - `GT%20300` > 300

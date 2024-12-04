@@ -62,7 +62,7 @@ df = team_stats(
 
 ### Data Visualization
 
-The project includes a Streamlit-based visualization tool (`eda.py`) that creates correlation heatmaps for various statistics:
+The project includes a Streamlit-based visualization tool (`eda.py`) that creates correlation heatmaps for various statistics as an example use case:
 
 ```bash
 streamlit run eda.py
@@ -123,6 +123,4 @@ Contains detailed documentation about the DataFrame structure:
 
 Feel free to submit issues, fork the repository, and create pull requests for any improvements.
 
-## License
 
-[Your chosen license]
